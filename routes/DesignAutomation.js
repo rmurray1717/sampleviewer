@@ -119,7 +119,8 @@ class Utils {
             });
         if (engine.includes('AutoCAD'))
             return ({
-                commandLine: '$(engine.path)\\accoreconsole.exe /i $(args[inputFile].path) /al $(appbundles[{0}].path) /s $(settings[script].path)',
+                ///commandLine: '$(engine.path)\\accoreconsole.exe /i $(args[inputFile].path) /al $(appbundles[{0}].path) /s $(settings[script].path)',
+                commandLine: '$(engine.path)\\accoreconsole.exe /i "$(args[inputFile].path)" /al "$(appbundles[{0}].path" /s "$(settings[script].path)"',
                 extension: 'dwg',
                 script: "UpdateParam\n"
             });
